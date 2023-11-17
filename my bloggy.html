@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <style type="text/css">
+    body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: green;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+article {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+aside {
+  background-color: #eee;
+  padding: 20px;
+  width: 25%;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <h2>Blog Post Title</h2>
+      <p>Published on: <time>November 9, 2023</time></p>
+      <p>This is a summary of your blog post. <span id="fullPost" style="display: none;">Here's the full content of your blog post. You can add more text, images, and other media here.</span></p>
+      <button onclick="toggleFullPost()">Read more</button>
+    </article>
+    <!-- Add more articles for other blog posts -->
+  </main>
+  <aside>
+    <h2>Recent Posts</h2>
+    <ul>
+      <li><a href="#">Post 1</a></li>
+      <li><a href="#">Post 2</a></li>
+      <li><a href="#">Post 3</a></li>
+    </ul>
+  </aside>
+  <footer>
+    <p>&copy; 2023 My Blog</p>
+  </footer>
+
+  <script>
+    function toggleFullPost() {
+      var fullPost = document.getElementById("fullPost");
+      var readMoreButton = document.querySelector("button");
+      
+      if (fullPost.style.display === "none") {
+        fullPost.style.display = "inline";
+        readMoreButton.textContent = "Read less";
+      } else {
+        fullPost.style.display = "none";
+        readMoreButton.textContent = "Read more";
+      }
+    }
+  </script>
+</body>
+</html>
